@@ -79,7 +79,8 @@ const HomePage: React.FC = () => {
                   <Image
                     src="/logo.png"
                     alt="Ayala's Bat Mitzvah Logo"
-                    fill
+                    width={48}
+                    height={48}
                     className="object-contain"
                     priority
                   />
