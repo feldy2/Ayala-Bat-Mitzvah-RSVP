@@ -72,11 +72,15 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
   };
 
   return (
-    <div className="card p-8 animate-slide-up">
+    <div className="card-elegant p-8 animate-slide-up">
       <header className="mb-8">
-        <h2 className="text-3xl font-bold mb-3 text-primary-700">RSVP Form</h2>
-        <p className="text-gray-600 text-lg">
+        <h2 className="text-3xl font-bold mb-3 text-primary-700 font-display">RSVP Form</h2>
+        <h3 className="text-2xl font-semibold mb-4 text-gold-600 hebrew-title">טופס אישור הגעה</h3>
+        <p className="text-gray-600 text-lg mb-4">
           We are so excited to celebrate with you! Please RSVP below:
+        </p>
+        <p className="text-gray-500 text-base hebrew-text">
+          אנחנו כל כך מתרגשים לחגוג איתכם! אנא אישרו את הגעתכם למטה:
         </p>
       </header>
 
@@ -195,7 +199,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
         <button
           type="submit"
           disabled={isLoading}
-          className="btn-primary w-full text-lg py-4"
+          className="btn-gold w-full text-lg py-4"
           aria-label="Submit RSVP"
         >
           {isLoading ? 'Submitting...' : 'Submit RSVP'}
@@ -208,10 +212,10 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
           role="link"
           aria-label="Add Bat Mitzvah event to calendar"
           className="inline-flex items-center space-x-2 text-primary-600 hover:text-primary-700 cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 rounded-lg px-4 py-2"
-          onClick={() => window.open('https://www.google.com/calendar/render?action=TEMPLATE&text=Sarah%27s+Bat+Mitzvah+Celebration&dates=20241215T140000Z/20241215T200000Z&details=Join+us+for+Sarah%27s+Bat+Mitzvah+celebration!&location=Temple+Beth+El%2C+123+Main+St%2C+City%2C+State', '_blank')}
+          onClick={() => window.open('https://www.google.com/calendar/render?action=TEMPLATE&text=Ayala%27s+Bat+Mitzvah+Celebration&dates=20241215T140000Z/20241215T200000Z&details=Join+us+for+Ayala%27s+Bat+Mitzvah+celebration!&location=Temple+Beth+El%2C+123+Main+St%2C+City%2C+State', '_blank')}
           onKeyDown={(e) =>
             handlePressEnterOrSpace(e, () =>
-              window.open('https://www.google.com/calendar/render?action=TEMPLATE&text=Sarah%27s+Bat+Mitzvah+Celebration&dates=20241215T140000Z/20241215T200000Z&details=Join+us+for+Sarah%27s+Bat+Mitzvah+celebration!&location=Temple+Beth+El%2C+123+Main+St%2C+City%2C+State', '_blank')
+              window.open('https://www.google.com/calendar/render?action=TEMPLATE&text=Ayala%27s+Bat+Mitzvah+Celebration&dates=20241215T140000Z/20241215T200000Z&details=Join+us+for+Ayala%27s+Bat+Mitzvah+celebration!&location=Temple+Beth+El%2C+123+Main+St%2C+City%2C+State', '_blank')
             )
           }
         >
