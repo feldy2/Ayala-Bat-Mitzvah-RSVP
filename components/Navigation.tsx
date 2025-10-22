@@ -17,7 +17,17 @@ const Navigation: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <div className="logo-container w-8 h-8">
+            <div 
+              className="w-8 h-8"
+              style={{
+                backgroundColor: '#fef7f0',
+                borderRadius: '50%',
+                padding: '2px',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                background: 'linear-gradient(135deg, #fef7f0 0%, #fffbeb 100%)',
+                border: '1px solid #fde68a'
+              }}
+            >
               <Image
                 src="/logo.png"
                 alt="Ayala's Bat Mitzvah Logo"

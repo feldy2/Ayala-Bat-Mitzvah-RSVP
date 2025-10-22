@@ -65,7 +65,17 @@ const HomePage: React.FC = () => {
           <div className="text-center mb-12 animate-fade-in">
             <div className="mb-8">
               <div className="flex justify-center mb-4">
-                <div className="logo-container logo-glow w-16 h-16 md:w-20 md:h-20">
+                <div 
+                  className="w-16 h-16 md:w-20 md:h-20"
+                  style={{
+                    backgroundColor: '#fef7f0',
+                    borderRadius: '50%',
+                    padding: '4px',
+                    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    background: 'linear-gradient(135deg, #fef7f0 0%, #fffbeb 100%)',
+                    border: '1px solid #fde68a'
+                  }}
+                >
                   <Image
                     src="/logo.png"
                     alt="Ayala's Bat Mitzvah Logo"
