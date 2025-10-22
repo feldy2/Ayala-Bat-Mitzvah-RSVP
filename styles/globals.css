@@ -52,7 +52,7 @@
   }
   
   .logo-container {
-    @apply relative overflow-hidden rounded-full bg-gradient-to-br from-primary-50 to-gold-50 p-2 shadow-lg;
+    @apply relative overflow-hidden rounded-full bg-gradient-to-br from-primary-50 to-gold-50 p-1 shadow-lg;
   }
   
   .logo-glow {

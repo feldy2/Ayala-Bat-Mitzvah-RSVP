@@ -15,9 +15,9 @@ const Navigation: React.FC = () => {
   return (
     <nav className="bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <div className="logo-container w-12 h-12">
+            <div className="logo-container w-8 h-8">
               <Image
                 src="/logo.png"
                 alt="Ayala's Bat Mitzvah Logo"
@@ -27,10 +27,10 @@ const Navigation: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary-700 font-display">
+              <span className="text-lg font-bold text-primary-700 font-display">
                 בת מצווה לאילה רחל
               </span>
-              <span className="text-sm text-gold-600 hebrew-title">
+              <span className="text-xs text-gold-600 hebrew-title">
                 Ayala's Bat Mitzvah
               </span>
             </div>

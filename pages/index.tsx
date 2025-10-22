@@ -64,8 +64,8 @@ const HomePage: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-12 animate-fade-in">
             <div className="mb-8">
-              <div className="flex justify-center mb-6">
-                <div className="logo-container logo-glow w-24 h-24 md:w-32 md:h-32">
+              <div className="flex justify-center mb-4">
+                <div className="logo-container logo-glow w-16 h-16 md:w-20 md:h-20">
                   <Image
                     src="/logo.png"
                     alt="Ayala's Bat Mitzvah Logo"
