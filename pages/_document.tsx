@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Head>
       <title>Sarah's Bat Mitzvah Celebration - RSVP</title>
-      <meta name="description" content="Join us for Sarah's Bat Mitzvah celebration! Please RSVP to confirm your attendance." />
+      <meta name="description" content="בואו לחגוג איתנו את הגעתה של אילה רחל לגיל מצוות! אנא אשרו את הגעתכם." />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />

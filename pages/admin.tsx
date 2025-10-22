@@ -45,7 +45,7 @@ const AdminPage: React.FC = () => {
 
   return (
     <Layout 
-      title="RSVP Admin - Sarah's Bat Mitzvah" 
+      title="RSVP Admin - Ayala's Bat Mitzvah" 
       description="Admin panel for managing Bat Mitzvah RSVPs"
     >
       <main className="min-h-screen py-8 px-4">

@@ -14,7 +14,7 @@ export default function handler(
   if (req.method !== 'POST') {
     return res.status(405).json({
       success: false,
-      message: 'Method not allowed'
+      message: 'שיטה לא מותרת'
     });
   }
 
@@ -25,7 +25,7 @@ export default function handler(
     if (!rsvpData.fullName || !rsvpData.email || !rsvpData.attending) {
       return res.status(400).json({
         success: false,
-        message: 'Missing required fields'
+        message: 'חסרים שדות חובה'
       });
     }
 
@@ -34,27 +34,27 @@ export default function handler(
     if (!emailRegex.test(rsvpData.email)) {
       return res.status(400).json({
         success: false,
-        message: 'Invalid email format'
+        message: 'אימייל לא תקין'
       });
     }
 
     // In a real application, you would save this to a database
-    console.log('RSVP received:', rsvpData);
+    console.log('אישור הגעה קבל:', rsvpData);
 
     // Simulate processing time
     setTimeout(() => {
       res.status(200).json({
         success: true,
-        message: 'RSVP submitted successfully',
+        message: 'אישור הגעה נשלח בהצלחה',
         data: rsvpData
       });
     }, 1000);
 
   } catch (error) {
-    console.error('RSVP submission error:', error);
+    console.error('שגיאת אישור הגעה:', error);
     res.status(500).json({
       success: false,
-      message: 'Internal server error'
+      message: 'שגיאת שרת פנימית'
     });
   }
 }

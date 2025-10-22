@@ -9,8 +9,8 @@ const ThankYou: React.FC = () => {
 
   return (
     <Layout 
-      title="Thank You - Sarah's Bat Mitzvah" 
-      description="Thank you for RSVPing to Sarah's Bat Mitzvah celebration!"
+      title="תודה רבה שאישרתם את ההגעה" 
+      description="תודה רבה שאישרתם את ההגעה לבת מצווה של אילה רחל"
       showNavigation={false}
     >
       <ThankYouPage guestName={name as string} />
