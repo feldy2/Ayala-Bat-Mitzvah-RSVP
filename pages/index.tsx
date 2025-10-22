@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
       title="Ayala's Bat Mitzvah - RSVP" 
       description="Join us for Ayala's Bat Mitzvah celebration on December 14th, 2024. Please RSVP to confirm your attendance."
     >
-      <main className="min-h-screen py-8 px-4">
+      <main className="min-h-screen py-8 px-4" style={{backgroundColor: '#fef7f0'}}>
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-12 animate-fade-in">
