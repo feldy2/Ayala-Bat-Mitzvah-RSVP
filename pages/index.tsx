@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import Layout from '@/components/Layout';
 import EventInfoCard from '@/components/EventInfoCard';
 import RSVPForm from '@/components/RSVPForm';
@@ -63,6 +64,17 @@ const HomePage: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-12 animate-fade-in">
             <div className="mb-8">
+              <div className="flex justify-center mb-6">
+                <div className="logo-container logo-glow w-24 h-24 md:w-32 md:h-32">
+                  <Image
+                    src="/logo.png"
+                    alt="Ayala's Bat Mitzvah Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </div>
               <h1 className="text-5xl md:text-6xl font-bold text-primary-700 mb-4 font-display">
               בת מצווה לאילה רחל
               </h1>

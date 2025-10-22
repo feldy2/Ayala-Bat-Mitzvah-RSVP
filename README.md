@@ -1,6 +1,6 @@
 # Bat Mitzvah RSVP Project
 
-A beautiful, responsive RSVP application built with Next.js, TypeScript, and TailwindCSS for Sarah's Bat Mitzvah celebration.
+A beautiful, responsive RSVP application built with Next.js, TypeScript, and TailwindCSS for Ayala's Bat Mitzvah celebration.
 
 ## Features
 
@@ -72,7 +72,7 @@ Update the event information in `pages/index.tsx`:
 
 ```typescript
 const eventDetails: EventDetails = {
-  name: "Sarah's Bat Mitzvah Celebration",
+  name: "Ayala's Bat Mitzvah Celebration",
   date: "Saturday, December 14th, 2024",
   time: "2:00 PM - 8:00 PM",
   location: "Temple Beth El",

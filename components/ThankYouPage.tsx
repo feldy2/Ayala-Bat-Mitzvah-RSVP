@@ -21,7 +21,7 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ guestName }) => {
               </p>
             )}
             <p className="text-lg text-gray-700 leading-relaxed">
-              We are absolutely thrilled that you'll be joining us for Sarah's Bat Mitzvah celebration! 
+              We are absolutely thrilled that you'll be joining us for Ayala's Bat Mitzvah celebration! 
               Your presence will make this special day even more meaningful.
             </p>
           </div>

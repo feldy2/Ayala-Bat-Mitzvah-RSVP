@@ -50,4 +50,12 @@
   .card-elegant {
     @apply bg-white rounded-2xl shadow-xl border border-gold-100 bg-gradient-to-br from-white to-gold-50;
   }
+  
+  .logo-container {
+    @apply relative overflow-hidden rounded-full bg-gradient-to-br from-primary-50 to-gold-50 p-2 shadow-lg;
+  }
+  
+  .logo-glow {
+    @apply shadow-2xl shadow-primary-200/50;
+  }
 }

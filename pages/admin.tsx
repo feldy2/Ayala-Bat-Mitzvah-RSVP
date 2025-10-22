@@ -55,7 +55,7 @@ const AdminPage: React.FC = () => {
               RSVP Management
             </h1>
             <p className="text-gray-600">
-              View and manage all RSVP responses for Sarah's Bat Mitzvah
+              View and manage all RSVP responses for Ayala's Bat Mitzvah
             </p>
           </div>
 

@@ -1,7 +1,7 @@
 {
   "name": "bat-mitzvah-rsvp",
   "version": "1.0.0",
-  "description": "A beautiful RSVP application for Sarah's Bat Mitzvah celebration",
+  "description": "A beautiful RSVP application for Ayala's Bat Mitzvah celebration",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
