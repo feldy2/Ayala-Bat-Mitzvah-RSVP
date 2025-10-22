@@ -11,8 +11,8 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
-  title = "Sarah's Bat Mitzvah - RSVP", 
-  description = "Join us for Sarah's Bat Mitzvah celebration! Please RSVP to confirm your attendance.",
+  title = "Ayala's Bat Mitzvah - RSVP", 
+  description = "Join us for Ayala's Bat Mitzvah celebration! Please RSVP to confirm your attendance.",
   showNavigation = true
 }) => {
   return (
@@ -24,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700&family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
