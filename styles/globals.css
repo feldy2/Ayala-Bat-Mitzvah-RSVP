@@ -10,9 +10,9 @@
   body {
     @apply min-h-screen;
     background-image: 
-      linear-gradient(rgba(254, 247, 240, 0.8), rgba(255, 251, 235, 0.8)),
+      linear-gradient(rgba(254, 247, 240, 0.3), rgba(255, 251, 235, 0.3)),
       url('/background-leaves.png');
-    background-size: cover;
+    background-size: 60%;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
