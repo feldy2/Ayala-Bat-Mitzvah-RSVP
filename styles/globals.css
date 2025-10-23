@@ -26,8 +26,8 @@
       url('/leaves-left-down.png'),
       url('/leaves-right-down.png');
     background-position: 
-      0 60px left,
-      0 60px right,
+      left 0 top 60px,
+      right 0 top 60px,
       bottom left,
       bottom right;
     background-size: 
@@ -45,8 +45,8 @@
   /* When scrolled down, move top leaves to very top */
   body.scrolled::before {
     background-position: 
-      top left,
-      top right,
+      left 0 top 0,
+      right 0 top 0,
       bottom left,
       bottom right;
   }
@@ -64,10 +64,10 @@
   @media (min-width: 1024px) {
     body::before {
       background-size: 
-        2500px,
-        2500px,
-        2500px,
-        2500px;
+        1700px,
+        1700px,
+        1700px,
+        1700px;
     }
   }
   
