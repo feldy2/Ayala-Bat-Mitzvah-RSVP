@@ -115,10 +115,19 @@ const HomePage: React.FC = () => {
                 אם יש לכם שאלות לגבי האירוע או זקוקים לעזרה עם אישור ההגעה, 
                 אנא אל תהססו לפנות אלינו.
               </p>
-              <div className="space-y-2 text-gray-700">
-                <p><strong>Contact:</strong> מוריה</p>
-                <p><strong>Phone:</strong> 050-8551995</p>
-                <p><strong>Email:</strong> feldy2@gmail.com</p>
+              <div className="space-y-6 text-gray-700 md:flex md:space-y-0 md:space-x-8 md:justify-center">
+                {/* First contact */}
+                <div className="space-y-2">
+                  <p><strong>Contact:</strong> מוריה</p>
+                  <p><strong>Phone:</strong> 050-8551995</p>
+                  <p><strong>Email:</strong> feldy2@gmail.com</p>
+                </div>
+                {/* Second contact */}
+                <div className="space-y-2">
+                  <p><strong>Contact:</strong> עדי</p>
+                  <p><strong>Phone:</strong> 054-5991336</p>
+                  <p><strong>Email:</strong> mywitnes@gmail.com</p>
+                </div>
               </div>
             </div>
           </div>

@@ -74,12 +74,8 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
   return (
     <div className="card-elegant p-8 animate-slide-up">
       <header className="mb-8">
-        <h2 className="text-3xl font-bold mb-3 text-primary-700 font-display">RSVP Form</h2>
-        <h3 className="text-2xl font-semibold mb-4 text-gold-600 hebrew-title">טופס אישור הגעה</h3>
-        <p className="text-gray-600 text-lg mb-4">
-          We are so excited to celebrate with you! Please RSVP below:
-        </p>
-        <p className="text-gray-500 text-base hebrew-text">
+        <h2 className="text-3xl font-bold mb-3 text-primary-700 font-display">טופס אישור הגעה</h2>
+        <p className="text-gray-600 text-lg mb-4 hebrew-text">
           אנחנו כל כך מתרגשים לחגוג איתכם! אנא אישרו את הגעתכם למטה:
         </p>
       </header>
@@ -87,7 +83,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
       <form className="space-y-6" onSubmit={handleSubmit} aria-label="RSVP Form">
         <div>
           <label htmlFor="fullName" className="block text-sm font-semibold text-gray-700 mb-2">
-            Full Name <span className="text-red-500">*</span>
+            שם מלא <span className="text-red-500">*</span>
           </label>
           <input
             id="fullName"
@@ -99,13 +95,13 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
             className="input-field"
             aria-label="Full Name"
             autoComplete="name"
-            placeholder="Enter your full name"
+            placeholder="הכנסו את שמכם המלא"
           />
         </div>
 
         <div>
           <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-            Email Address <span className="text-red-500">*</span>
+            Email <span className="text-red-500">*</span>
           </label>
           <input
             id="email"
@@ -117,13 +113,13 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
             className="input-field"
             aria-label="Email address"
             autoComplete="email"
-            placeholder="Enter your email address"
+            placeholder="הכנסו את כתובת האימייל שלכם"
           />
         </div>
 
         <div>
           <label htmlFor="attending" className="block text-sm font-semibold text-gray-700 mb-2">
-            Will you attend? <span className="text-red-500">*</span>
+            אשרו את הגעתכם <span className="text-red-500">*</span>
           </label>
           <select
             id="attending"
@@ -137,15 +133,15 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
             <option value="" disabled>
               Select an option
             </option>
-            <option value="yes">Yes, I will attend</option>
-            <option value="no">No, I can't make it</option>
+            <option value="yes">כן, אגיע</option>
+            <option value="no">לא, לצערי לא אוכל להגיע</option>
           </select>
         </div>
 
         {formData.attending === 'yes' && (
           <div>
             <label htmlFor="guests" className="block text-sm font-semibold text-gray-700 mb-2">
-              How many guests (including you)? <span className="text-red-500">*</span>
+              ?כמה אנשים <span className="text-red-500">*</span>
             </label>
             <input
               id="guests"
@@ -157,14 +153,14 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
               onChange={handleInputChange}
               className="input-field"
               aria-label="Guest Count"
-              placeholder="Number of guests"
+              placeholder="הכנסו את מספר האנשים"
             />
           </div>
         )}
 
         <div>
           <label htmlFor="dietaryRestrictions" className="block text-sm font-semibold text-gray-700 mb-2">
-            Dietary Restrictions
+            מגבלות תזונתיות (אם יש):
           </label>
           <input
             id="dietaryRestrictions"
@@ -174,23 +170,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
             onChange={handleInputChange}
             className="input-field"
             aria-label="Dietary Restrictions"
-            placeholder="e.g., vegetarian, nut allergy, kosher"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-            Message for the family
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleInputChange}
-            className="input-field resize-none"
-            aria-label="Message for the family"
-            rows={4}
-            placeholder="Share a special message or well wishes..."
+            placeholder="אלרגיות, רגישוית וכו'"
           />
         </div>
 
@@ -200,9 +180,9 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
           type="submit"
           disabled={isLoading}
           className="btn-gold w-full text-lg py-4"
-          aria-label="Submit RSVP"
+          aria-label="שליחת אישור הגעה"
         >
-          {isLoading ? 'Submitting...' : 'Submit RSVP'}
+          {isLoading ? 'מעבד...' : 'שליחת אישור הגעה'}
         </button>
       </form>
 
@@ -220,7 +200,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
           }
         >
           <span>📅</span>
-          <span className="underline">Add to Calendar</span>
+          <span className="underline">הוסף ליומן</span>
         </div>
       </div>
     </div>
