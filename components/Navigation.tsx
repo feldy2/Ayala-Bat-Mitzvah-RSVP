@@ -9,7 +9,7 @@ const Navigation: React.FC = () => {
 
   const navItems = [
     { href: '/', label: 'דף הבית', icon: Home },
-    { href: '/admin', label: 'Admin', icon: Users },
+    { href: '/admin', label: 'Admin', icon: Users, hideOnMobile: true },
   ];
 
   return (
@@ -38,30 +38,39 @@ const Navigation: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-primary-700 font-display">
+              <span className="text-sm md:text-lg font-bold text-primary-700 font-display hebrew-text">
                 בת מצווה לאילה רחל מימון
               </span>
             </div>
           </div>
           
-          <div className="flex space-x-8">
-            {navItems.map(({ href, label, icon: Icon }) => {
+          <div className="flex space-x-4 md:space-x-8">
+            {navItems.map(({ href, label, icon: Icon, hideOnMobile }) => {
               const isActive = router.pathname === href;
               return (
                 <Link
                   key={href}
                   href={href}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`hidden md:flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive
                       ? 'bg-primary-100 text-primary-700'
                       : 'text-gray-600 hover:text-primary-600 hover:bg-primary-50'
-                  }`}
+                  } ${hideOnMobile ? 'md:flex' : 'sm:flex'}`}
                 >
                   <Icon className="h-4 w-4" />
-                  <span>{label}</span>
+                  <span className="hebrew-text">{label}</span>
                 </Link>
               );
             })}
+            
+            {/* Mobile-only home button */}
+            <Link
+              href="/"
+              className="md:hidden flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-primary-100 text-primary-700"
+            >
+              <Home className="h-4 w-4" />
+              <span className="hebrew-text">דף הבית</span>
+            </Link>
           </div>
         </div>
       </div>
