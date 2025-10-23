@@ -34,15 +34,12 @@ const Navigation: React.FC = () => {
                 fill
                 className="object-contain"
                 priority
-                sizes="32px"
+                sizes="(max-width: 768px) 48px, 64px"
               />
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold text-primary-700 font-display">
-                בת מצווה לאילה רחל
-              </span>
-              <span className="text-xs text-gold-600 hebrew-title">
-                Ayala's Bat Mitzvah
+                בת מצווה לאילה רחל מימון
               </span>
             </div>
           </div>

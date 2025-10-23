@@ -10,8 +10,7 @@ const EventInfoCard: React.FC<EventInfoCardProps> = ({ event }) => {
   return (
     <div className="card-elegant p-8 mb-8 animate-fade-in">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-primary-700 mb-2 font-display">{event.name}</h2>
-        <h3 className="text-2xl font-semibold text-gold-600 mb-4 hebrew-title text-right">פרטי האירוע</h3>
+        <h2 className="text-2xl font-semibold text-gold-700 mb-4 hebrew-title text-right">פרטי האירוע</h2>
         <p className="text-gray-600 text-lg mb-4 text-right">{event.description}</p>
       </div>
       

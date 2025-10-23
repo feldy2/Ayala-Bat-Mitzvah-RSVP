@@ -100,6 +100,24 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
         </div>
 
         <div>
+          <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+            טלפון <span className="text-red-500">*</span>
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            value={formData.phone}
+            onChange={handleInputChange}
+            className="input-field"
+            aria-label="Phone number"
+            autoComplete="tel"
+            placeholder="הכנסו את מספר הטלפון שלכם"
+          />
+        </div>
+
+        <div>
           <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
             Email <span className="text-red-500">*</span>
           </label>
