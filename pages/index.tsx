@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
       title="Ayala's Bat Mitzvah - RSVP" 
       description="Join us for Ayala's Bat Mitzvah celebration on December 14th, 2024. Please RSVP to confirm your attendance."
     >
-      <main className="min-h-screen py-8 px-4" style={{backgroundColor: '#fef7f0'}}>
+      <main className="min-h-screen py-8 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-12 animate-fade-in">
@@ -118,15 +118,17 @@ const HomePage: React.FC = () => {
               <div className="space-y-6 text-gray-700 md:flex md:space-y-0 md:space-x-8 md:justify-center">
                 {/* First contact */}
                 <div className="space-y-2">
-                  <p><strong>Contact:</strong> מוריה</p>
-                  <p><strong>Phone:</strong> 050-8551995</p>
-                  <p><strong>Email:</strong> feldy2@gmail.com</p>
+                  <p><strong>איש קשר:</strong> מוריה</p>
+                  <p><strong>טלפון:</strong> 050-8551995</p>
+                  <p><strong>אימייל:</strong> feldy2@gmail.com</p>
                 </div>
+                {/* Add more space between the two contacts */}
+                <div className="h-8 md:h-0 md:w-16"></div>
                 {/* Second contact */}
                 <div className="space-y-2">
-                  <p><strong>Contact:</strong> עדי</p>
-                  <p><strong>Phone:</strong> 054-5991336</p>
-                  <p><strong>Email:</strong> mywitnes@gmail.com</p>
+                  <p><strong>איש קשר:</strong> עדי</p>
+                  <p><strong>טלפון:</strong> 054-5991336</p>
+                  <p><strong>אימייל:</strong> mywitnes@gmail.com</p>
                 </div>
               </div>
             </div>

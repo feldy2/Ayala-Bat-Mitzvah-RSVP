@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({
   showNavigation = true
 }) => {
   return (
-    <div style={{backgroundColor: '#fef7f0', minHeight: '100vh'}}>
+    <div className="min-h-screen">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
