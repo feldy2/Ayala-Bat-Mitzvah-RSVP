@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Navigation from './Navigation';
 
@@ -15,6 +15,16 @@ const Layout: React.FC<LayoutProps> = ({
   description = "Join us for Ayala's Bat Mitzvah celebration! Please RSVP to confirm your attendance.",
   showNavigation = true
 }) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 100; // Adjust threshold as needed
+      document.body.classList.toggle('scrolled', scrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Head>
