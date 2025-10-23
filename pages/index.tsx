@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
             <div className="mb-8">
               <div className="flex justify-center mb-4">
                 <div 
-                  className="w-16 h-16 md:w-20 md:h-20"
+                  className="w-16 h-16 md:w-20 md:h-20 relative"
                   style={{
                     backgroundColor: '#fef7f0',
                     borderRadius: '50%',
@@ -79,10 +79,10 @@ const HomePage: React.FC = () => {
                   <Image
                     src="/logo.png"
                     alt="Ayala's Bat Mitzvah Logo"
-                    width={48}
-                    height={48}
+                    fill
                     className="object-contain"
                     priority
+                    sizes="(max-width: 768px) 48px, 64px"
                   />
                 </div>
               </div>

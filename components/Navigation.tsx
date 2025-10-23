@@ -18,7 +18,7 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
             <div 
-              className="w-8 h-8"
+              className="w-8 h-8 relative"
               style={{
                 backgroundColor: '#fef7f0',
                 borderRadius: '50%',
@@ -34,6 +34,7 @@ const Navigation: React.FC = () => {
                 fill
                 className="object-contain"
                 priority
+                sizes="32px"
               />
             </div>
             <div className="flex flex-col">
