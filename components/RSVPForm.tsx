@@ -9,6 +9,7 @@ interface RSVPFormProps {
 
 const initialFormData: RSVPFormData = {
   fullName: '',
+  phone: '',
   email: '',
   attending: '',
   guests: '',
@@ -37,8 +38,12 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
       setFormError('Full name is required.');
       return false;
     }
-    if (!formData.email.trim() || !/^[\w\-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
-      setFormError('A valid email address is required.');
+    if (!formData.phone.trim()) {
+      setFormError('Phone number is required.');
+      return false;
+    }
+    if (formData.email.trim() && !/^[\w\-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+      setFormError('Please enter a valid email address.');
       return false;
     }
     if (!formData.attending) {
@@ -119,19 +124,18 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
 
         <div>
           <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-            Email <span className="text-red-500">*</span>
+            Email
           </label>
           <input
             id="email"
             name="email"
             type="email"
-            required
             value={formData.email}
             onChange={handleInputChange}
             className="input-field"
             aria-label="Email address"
             autoComplete="email"
-            placeholder="הכנסו את כתובת האימייל שלכם"
+            placeholder="הכנסו את כתובת האימייל שלכם (אופציונלי)"
           />
         </div>
 

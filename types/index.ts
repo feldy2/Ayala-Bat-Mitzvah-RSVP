@@ -1,5 +1,6 @@
 export interface RSVPFormData {
   fullName: string;
+  phone: string;
   email: string;
   attending: string;
   guests: string;
