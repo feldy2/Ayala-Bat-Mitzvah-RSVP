@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@/components/Layout';
 import { RSVPFormData } from '@/types';
-import { Users, Calendar, Mail, MessageSquare } from 'lucide-react';
+import { Users, Calendar, Mail, MessageSquare, Lock, Download } from 'lucide-react';
 
 interface RSVPData extends RSVPFormData {
   id: string;
@@ -9,11 +9,23 @@ interface RSVPData extends RSVPFormData {
 }
 
 const AdminPage: React.FC = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
   const [rsvps, setRsvps] = useState<RSVPData[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<'all' | 'yes' | 'no'>('all');
 
+  // Admin password - in a real app, this would be stored securely on the server
+  const ADMIN_PASSWORD = 'feldy6350';
+
   useEffect(() => {
+    // Check if already authenticated
+    const authStatus = localStorage.getItem('adminAuthenticated');
+    if (authStatus === 'true') {
+      setIsAuthenticated(true);
+    }
+    
     // Load RSVPs from localStorage
     const storedRSVPs = localStorage.getItem('rsvps');
     if (storedRSVPs) {
@@ -21,6 +33,92 @@ const AdminPage: React.FC = () => {
     }
     setLoading(false);
   }, []);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoginError('');
+    
+    if (password === ADMIN_PASSWORD) {
+      setIsAuthenticated(true);
+      localStorage.setItem('adminAuthenticated', 'true');
+    } else {
+      setLoginError('Incorrect password. Please try again.');
+      setPassword('');
+    }
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    localStorage.removeItem('adminAuthenticated');
+    setPassword('');
+  };
+
+  const exportToExcel = () => {
+    // Load SheetJS library dynamically
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';
+    script.onload = () => {
+      // Prepare data for export
+      const exportData = filteredRSVPs.map(rsvp => ({
+        'Full Name': rsvp.fullName,
+        'Phone': rsvp.phone,
+        'Email': rsvp.email || 'N/A',
+        'Attending': rsvp.attending === 'yes' ? 'Yes' : 'No',
+        'Number of Guests': rsvp.attending === 'yes' ? rsvp.guests : '0',
+        'Dietary Restrictions': rsvp.dietaryRestrictions || 'None',
+        'Message': rsvp.message || 'None',
+        'Submitted Date': new Date(rsvp.submittedAt).toLocaleString()
+      }));
+
+      // Create workbook and worksheet
+      const wb = (window as any).XLSX.utils.book_new();
+      const ws = (window as any).XLSX.utils.json_to_sheet(exportData);
+      
+      // Add worksheet to workbook
+      (window as any).XLSX.utils.book_append_sheet(wb, ws, 'Guest List');
+      
+      // Generate filename with current date
+      const today = new Date().toISOString().split('T')[0];
+      const filename = `Ayala_Bat_Mitzvah_Guest_List_${today}.xlsx`;
+      
+      // Save file
+      (window as any).XLSX.writeFile(wb, filename);
+    };
+    document.head.appendChild(script);
+  };
+
+  const exportToCSV = () => {
+    // Prepare CSV data
+    const headers = ['Full Name', 'Phone', 'Email', 'Attending', 'Number of Guests', 'Dietary Restrictions', 'Message', 'Submitted Date'];
+    const csvData = filteredRSVPs.map(rsvp => [
+      rsvp.fullName,
+      rsvp.phone,
+      rsvp.email || 'N/A',
+      rsvp.attending === 'yes' ? 'Yes' : 'No',
+      rsvp.attending === 'yes' ? rsvp.guests : '0',
+      rsvp.dietaryRestrictions || 'None',
+      rsvp.message || 'None',
+      new Date(rsvp.submittedAt).toLocaleString()
+    ]);
+
+    // Create CSV content
+    const csvContent = [headers, ...csvData]
+      .map(row => row.map(field => `"${field}"`).join(','))
+      .join('\n');
+
+    // Create and download file
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    
+    const today = new Date().toISOString().split('T')[0];
+    link.setAttribute('download', `Ayala_Bat_Mitzvah_Guest_List_${today}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const filteredRSVPs = rsvps.filter(rsvp => {
     if (filter === 'all') return true;
@@ -43,6 +141,74 @@ const AdminPage: React.FC = () => {
     );
   }
 
+  // Show login form if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <Layout 
+        title="Admin Login - Ayala's Bat Mitzvah" 
+        description="Admin login for Bat Mitzvah RSVP management"
+      >
+        <main className="min-h-screen flex items-center justify-center py-8 px-4">
+          <div className="max-w-md w-full">
+            <div className="card-elegant p-8">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Lock className="h-8 w-8 text-primary-600" />
+                </div>
+                <h1 className="text-3xl font-bold text-primary-700 mb-2">
+                  Admin Access
+                </h1>
+                <p className="text-gray-600">
+                  Enter password to access RSVP management
+                </p>
+              </div>
+
+              <form onSubmit={handleLogin} className="space-y-6">
+                <div>
+                  <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Password
+                  </label>
+                  <input
+                    id="password"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="input-field"
+                    placeholder="Enter admin password"
+                    required
+                    autoFocus
+                  />
+                </div>
+
+                {loginError && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                    {loginError}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  className="btn-primary w-full"
+                >
+                  Login
+                </button>
+              </form>
+
+              <div className="mt-6 text-center">
+                <button
+                  onClick={() => window.location.href = '/'}
+                  className="text-primary-600 hover:text-primary-700 font-medium"
+                >
+                  ← Back to Home
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </Layout>
+    );
+  }
+
   return (
     <Layout 
       title="RSVP Admin - Ayala's Bat Mitzvah" 
@@ -51,9 +217,35 @@ const AdminPage: React.FC = () => {
       <main className="min-h-screen py-8 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-primary-700 mb-4">
-              RSVP Management
-            </h1>
+            <div className="flex justify-between items-center mb-4">
+              <div className="flex space-x-3">
+                <button
+                  onClick={exportToExcel}
+                  className="btn-gold text-sm flex items-center space-x-2"
+                  disabled={filteredRSVPs.length === 0}
+                >
+                  <Download className="h-4 w-4" />
+                  <span>Export Excel</span>
+                </button>
+                <button
+                  onClick={exportToCSV}
+                  className="btn-secondary text-sm flex items-center space-x-2"
+                  disabled={filteredRSVPs.length === 0}
+                >
+                  <Download className="h-4 w-4" />
+                  <span>Export CSV</span>
+                </button>
+              </div>
+              <h1 className="text-4xl font-bold text-primary-700">
+                RSVP Management
+              </h1>
+              <button
+                onClick={handleLogout}
+                className="btn-secondary text-sm"
+              >
+                Logout
+              </button>
+            </div>
             <p className="text-gray-600">
               View and manage all RSVP responses for Ayala's Bat Mitzvah
             </p>

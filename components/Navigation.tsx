@@ -8,7 +8,7 @@ const Navigation: React.FC = () => {
   const router = useRouter();
 
   const navItems = [
-    { href: '/', label: 'Home', icon: Home },
+    { href: '/', label: 'דף הבית', icon: Home },
     { href: '/admin', label: 'Admin', icon: Users },
   ];
 
@@ -34,7 +34,7 @@ const Navigation: React.FC = () => {
                 fill
                 className="object-contain"
                 priority
-                sizes="(max-width: 768px) 48px, 64px"
+                sizes="(max-width: 768px) 70px, 100px"
               />
             </div>
             <div className="flex flex-col">

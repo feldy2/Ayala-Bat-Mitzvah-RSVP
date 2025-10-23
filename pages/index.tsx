@@ -82,7 +82,7 @@ const HomePage: React.FC = () => {
                     fill
                     className="object-contain"
                     priority
-                    sizes="(max-width: 768px) 48px, 64px"
+                    sizes="(max-width: 768px) 70px, 100px"
                   />
                 </div>
               </div>
