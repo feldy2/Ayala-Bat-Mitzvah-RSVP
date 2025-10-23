@@ -31,10 +31,10 @@
       bottom left,
       bottom right;
     background-size: 
-      150px,
-      150px,
-      150px,
-      150px;
+      1500px,
+      1500px,
+      1500px,
+      1500px;
     background-repeat: no-repeat;
     opacity: 0.5;
     z-index: -1;
@@ -44,10 +44,10 @@
   @media (min-width: 768px) {
     body::before {
       background-size: 
-        200px,
-        200px,
-        200px,
-        200px;
+        2000px,
+        2000px,
+        2000px,
+        2000px;
     }
   }
 
