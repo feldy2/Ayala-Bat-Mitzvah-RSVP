@@ -9,13 +9,56 @@
   
   body {
     @apply min-h-screen;
+    background-color: #fef7f0;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: 
-      linear-gradient(rgba(254, 247, 240, 0.3), rgba(255, 251, 235, 0.3)),
-      url('/background-leaves.png');
-    background-size: 60%;
-    background-position: center;
-    background-attachment: fixed;
+      url('/leaves-left-up.png'),
+      url('/leaves-right-up.png'),
+      url('/leaves-left-down.png'),
+      url('/leaves-right-down.png');
+    background-position: 
+      top left,
+      top right,
+      bottom left,
+      bottom right;
+    background-size: 
+      150px,
+      150px,
+      150px,
+      150px;
     background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  @media (min-width: 768px) {
+    body::before {
+      background-size: 
+        200px,
+        200px,
+        200px,
+        200px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    body::before {
+      background-size: 
+        250px,
+        250px,
+        250px,
+        250px;
+    }
   }
   
   /* Hebrew text support */
