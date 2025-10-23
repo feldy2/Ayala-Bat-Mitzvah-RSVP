@@ -47,35 +47,35 @@
   @media (max-width: 480px) {
     body::before {
       background-size: 
-        500px,
-        500px;
+        800px,
+        800px;
       background-position: 
-        left -30px top 40px,
-        right -30px top 40px;
-      opacity: 0.4;
+        left -50px top 30px,
+        right -50px top 30px;
+      opacity: 0.5;
     }
     
     body.scrolled::before {
       background-position: 
-        left -30px top -10px,
-        right -30px top -10px;
+        left -50px top -20px,
+        right -50px top -20px;
     }
   }
 
   @media (min-width: 481px) and (max-width: 767px) {
     body::before {
       background-size: 
-        700px,
-        700px;
+        1000px,
+        1000px;
       background-position: 
-        left -40px top 45px,
-        right -40px top 45px;
+        left -60px top 35px,
+        right -60px top 35px;
     }
     
     body.scrolled::before {
       background-position: 
-        left -40px top -5px,
-        right -40px top -5px;
+        left -60px top -15px,
+        right -60px top -15px;
     }
   }
 
