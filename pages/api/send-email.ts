@@ -39,6 +39,15 @@ export default async function handler(
       });
     }
 
+    // Check if email credentials are configured
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
+      console.error('Email credentials not configured');
+      return res.status(500).json({
+        success: false,
+        message: 'Email service not configured. Please set up environment variables.'
+      });
+    }
+
     // Create transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
