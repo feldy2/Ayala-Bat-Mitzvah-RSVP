@@ -5,7 +5,7 @@ import ThankYouPage from '@/components/ThankYouPage';
 
 const ThankYou: React.FC = () => {
   const router = useRouter();
-  const { name } = router.query;
+  const { name, hasEmail } = router.query;
 
   return (
     <Layout 
@@ -13,7 +13,10 @@ const ThankYou: React.FC = () => {
       description="תודה רבה שאישרתם את ההגעה לבת מצווה של אילה רחל"
       showNavigation={false}
     >
-      <ThankYouPage guestName={name as string} />
+      <ThankYouPage 
+        guestName={name as string} 
+        hasEmail={hasEmail === 'true'}
+      />
     </Layout>
   );
 };

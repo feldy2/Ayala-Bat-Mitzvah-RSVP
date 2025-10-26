@@ -50,8 +50,8 @@
         600px,
         600px;
       background-position: 
-        left -40px top 30px,
-        right -40px top 30px;
+        left -40px top 55px,
+        right -40px top 55px;
       opacity: 0.45;
     }
     
@@ -68,8 +68,8 @@
         750px,
         750px;
       background-position: 
-        left -50px top 35px,
-        right -50px top 35px;
+        left -50px top 60px,
+        right -50px top 60px;
     }
     
     body.scrolled::before {

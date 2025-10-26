@@ -26,9 +26,6 @@ const HomePage: React.FC = () => {
     setSubmitMessage(null);
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
       // In a real application, you would send this data to your backend
       console.log('RSVP Data:', formData);
       
@@ -42,8 +39,33 @@ const HomePage: React.FC = () => {
       existingRSVPs.push(newRSVP);
       localStorage.setItem('rsvps', JSON.stringify(existingRSVPs));
       
+      // Send email if email is provided
+      if (formData.email) {
+        try {
+          await fetch('/api/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              to: formData.email,
+              name: formData.fullName,
+              attending: formData.attending,
+              guests: formData.guests
+            })
+          });
+        } catch (emailError) {
+          console.error('Error sending email:', emailError);
+          // Don't block the success flow if email fails
+        }
+      }
+      
       // Redirect to thank you page
-      router.push(`/thank-you?name=${encodeURIComponent(formData.fullName)}`);
+      const params = new URLSearchParams({
+        name: formData.fullName,
+        hasEmail: formData.email ? 'true' : 'false'
+      });
+      router.push(`/thank-you?${params.toString()}`);
     } catch (error) {
       setSubmitMessage({
         type: 'error',
