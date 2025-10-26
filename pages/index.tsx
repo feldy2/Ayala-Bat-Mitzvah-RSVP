@@ -42,7 +42,8 @@ const HomePage: React.FC = () => {
       // Send email if email is provided
       if (formData.email) {
         try {
-          await fetch('/api/send-email', {
+          console.log('Attempting to send email to:', formData.email);
+          const emailResponse = await fetch('/api/send-email', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -54,6 +55,13 @@ const HomePage: React.FC = () => {
               guests: formData.guests
             })
           });
+          
+          const emailResult = await emailResponse.json();
+          console.log('Email response:', emailResult);
+          
+          if (!emailResponse.ok) {
+            console.error('Email failed:', emailResult.message);
+          }
         } catch (emailError) {
           console.error('Error sending email:', emailError);
           // Don't block the success flow if email fails

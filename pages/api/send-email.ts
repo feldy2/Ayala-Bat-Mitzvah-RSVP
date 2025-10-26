@@ -125,9 +125,12 @@ export default async function handler(
 
   } catch (error) {
     console.error('Error sending email:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('Full error:', errorMessage);
     res.status(500).json({
       success: false,
-      message: 'Failed to send email'
+      message: 'Failed to send email',
+      error: errorMessage
     });
   }
 }
