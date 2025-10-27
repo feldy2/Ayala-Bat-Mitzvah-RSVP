@@ -101,7 +101,7 @@ export default async function handler(
           
           
 		<!-- Header Section -->
-          <div style="text-align: center; margin-bottom: 30px; padding: 20px 0; max-width: 210px; margin-left: auto; margin-right: auto;">
+          <div style="text-align: center; margin-bottom: 30px; padding: 20px 0; max-width: 210px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
             <div style="display: inline-block; width: 70px; height: 70px; margin-bottom: 15px; background: linear-gradient(135deg, #fef7f0 0%, #fffbeb 100%); border-radius: 50%; padding: 6px; box-shadow: 0 7px 12px -3px rgba(0, 0, 0, 0.09); border: 1px solid #fde68a;">
               <img src="https://raw.githubusercontent.com/feldy2/Ayala-Bat-Mitzvah-RSVP/refs/heads/main/public/logo.png" alt="Ayala Bat Mitzvah Logo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain;" />
             </div>
@@ -109,7 +109,7 @@ export default async function handler(
           </div>
           
           <!-- Main Content -->
-          <div style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 251, 235, 0.95)); padding: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <div style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 251, 235, 0.95)); padding: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); position: relative; z-index: 1;">
             <h2 style="color: #BF7046; font-size: 24px; margin-top: 0; font-weight: bold;">${name}, שלום!</h2>
             
             <p style="font-size: 16px; line-height: 1.6; color: #4B5563;">
@@ -176,7 +176,7 @@ export default async function handler(
             </div>
           </div>
           
-          <div style="text-align: center; margin-top: 30px; color: #999; font-size: 14px;">
+          <div style="text-align: center; margin-top: 30px; color: #999; font-size: 14px; position: relative; z-index: 1;">
             <p>זהו מייל אוטומטי, אנא אל תשיבו למייל זה</p>
           </div>
         </div>
