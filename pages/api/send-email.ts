@@ -69,7 +69,7 @@ export default async function handler(
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: to,
-      subject: 'תודה שאישרתם הגעה - לבת מצווה של אילה רחל מימון',
+      subject: 'תודה שאישרתם את הגעתכם - לבת המצווה של אילה רחל מימון',
       html: `
         <!DOCTYPE html>
         <html dir="rtl">
@@ -77,36 +77,37 @@ export default async function handler(
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
-        <body style="font-family: 'Assistant', 'Heebo', 'Inter', system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5;">
-          <!-- Decorative Leaves in Corners -->
-          <div style="
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            z-index: 0;
-            pointer-events: none;
-          ">
-            <div style="
-              position: absolute;
-              top: 0; left: 100;
-              width: 500px; height: 500px;
-              opacity: 0.3;transform:rotate(0deg);">
-              <img src="https://i.ibb.co/d4fdBX9f/leaves-full.png" alt="Leaves" 
-                 style="width: 100%; height: 100%; object-fit: contain;" />
-          </div>
-            <div style="
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            z-index: 0;
-            pointer-events: none;
-          ">
-            <div style="
-              position: absolute;
-              top: 0; left: 0;
-              width: 500px; height: 500px;
-              opacity: 0.3;transform:rotate(270deg);">
-            <img src="https://i.ibb.co/d4fdBX9f/leaves-full.png" 
-                 alt="Leaves" 
-                 style="width: 100%; height: 100%; object-fit: contain;" />
+        <body style="font-family: 'Assistant', 'Heebo', 'Inter', system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; position: relative;">
+          <!-- Decorative Leaves Background: Top Left & Top Right -->
+          <div style="pointer-events: none; position: fixed; inset: 0; z-index: 0;">
+            <!-- Top Left Leaf -->
+            <img 
+              src="https://i.ibb.co/d4fdBX9f/leaves-full.png"
+              alt="Leaves Top Left"
+              style="
+                position: absolute;
+                top: 0; left: 0;
+                width: 230px; height: 230px;
+                opacity: 0.23;
+                transform: scaleX(-1) rotate(0deg);
+                object-fit: contain;
+                z-index: 0;
+              "
+            />
+            <!-- Top Right Leaf -->
+            <img 
+              src="https://i.ibb.co/d4fdBX9f/leaves-full.png"
+              alt="Leaves Top Right"
+              style="
+                position: absolute;
+                top: 0; right: 0;
+                width: 230px; height: 230px;
+                opacity: 0.23;
+                transform:  rotate(0deg);
+                object-fit: contain;
+                z-index: 0;
+              "
+            />
           </div>
             </div>
           </div>
@@ -121,7 +122,7 @@ export default async function handler(
             <div style="display: inline-block; width: 70px; height: 70px; margin-bottom: 15px; background: linear-gradient(135deg, #fef7f0 0%, #fffbeb 100%); border-radius: 50%; padding: 6px; box-shadow: 0 7px 12px -3px rgba(0, 0, 0, 0.09); border: 1px solid #fde68a;">
               <img src="https://raw.githubusercontent.com/feldy2/Ayala-Bat-Mitzvah-RSVP/refs/heads/main/public/logo.png" alt="Ayala Bat Mitzvah Logo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain;" />
             </div>
-            <h1 style="color: #BF7046; font-size: 28px; margin: 0;">בת מצווה של אילה רחל מימון</h1>
+            <h1 style="color: #BF7046; font-size: 28px; margin: 0;">בת המצווה של אילה רחל מימון</h1>
           </div>
           
           <!-- Main Content -->
@@ -145,7 +146,7 @@ export default async function handler(
             </div>
             
             <p style="font-size: 16px; line-height: 1.6; color: #4B5563;">
-              אנו מאוד מתרגשים לחגוג איתכם! בקרוב תקבלו פרטים נוספים על האירוע.
+              אנו מאוד מתרגשים לחגוג איתכם!
             </p>
             
             <p style="font-size: 16px; line-height: 1.6; color: #4B5563; margin-top: 30px;">
