@@ -83,22 +83,6 @@ export default async function handler(
             <td style="padding: 10px 120px; position: relative;">
         <div style="font-family: 'Assistant', 'Heebo', 'Inter', system-ui, -apple-system, sans-serif; direction: rtl; text-align: right; width: 100%; position: relative;">
           
-          <!-- Decorative Leaves Background: Top Left & Top Right -->
-          <div style="pointer-events: none; position: absolute; top: -100px; left: -120px; right: -120px; bottom: 0; z-index: 0; overflow: hidden;">
-            <!-- Top Left Leaf -->
-            <img 
-              src="https://i.ibb.co/d4fdBX9f/leaves-full.png"
-              alt=""
-              style="position: absolute; top: -30px; left: -30px; width: 400px; height: 400px; opacity: 0.15; transform: rotate(-10deg); object-fit: contain;"
-            />
-            <!-- Top Right Leaf -->
-            <img 
-              src="https://i.ibb.co/d4fdBX9f/leaves-full.png"
-              alt=""
-              style="position: absolute; top: -30px; right: -30px; width: 400px; height: 400px; opacity: 0.15; transform: rotate(10deg); object-fit: contain;"
-            />
-          </div>
-          
           <!-- Header Section -->
           <div style="text-align: center; margin-bottom: 30px; padding: 20px 0; max-width: 210px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">
             <div style="display: inline-block; width: 70px; height: 70px; margin-bottom: 15px; background: linear-gradient(135deg, #fef7f0 0%, #fffbeb 100%); border-radius: 50%; padding: 6px; box-shadow: 0 7px 12px -3px rgba(0, 0, 0, 0.09); border: 1px solid #fde68a;">
