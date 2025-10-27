@@ -145,14 +145,30 @@ export default async function handler(
               <p style="font-size: 16px; color: #4B5563; margin-bottom: 15px;">
                 אליעזר אלתר 30, חיפה
               </p>
-              <div style="background-color: #f9fafb; border-radius: 8px; padding: 15px; border: 2px solid #fde68a; text-align: center;">
-                <a href="https://maps.google.com/?q=32.7743129,35.0121392" 
-                   style="display: inline-block; background-color: #d97706; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: bold;">
-                  📍 פתח במפות Google
-                </a>
+                <div style="text-align: center; background-color: #f3f4f6; padding: 30px 20px; border-radius: 8px; border: 2px solid #fde68a; margin: 20px 0;">
+                  <p style="font-size: 18px; color: #BF7046; margin-bottom: 20px; font-weight: bold;">🗺️ ניווט לאירוע</p>
+                  <table role="presentation" style="margin: 0 auto;">
+                    <tr>
+                      <td style="padding: 0 10px;">
+                        <a href="https://maps.app.goo.gl/gw8zFeGbgLPdQsG37" 
+                            style="display: inline-block; background-color: #4285F4; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
+                          📍 Google Maps
+                        </a>
+                      </td>
+                      <td style="padding: 0 10px;">
+                        <a href="https://waze.com/ul?ll=32.7743129,35.0121392&navigate=yes" 
+                            style="display: inline-block; background-color: #33CCFF; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
+                          🚗 Waze
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                  <p style="font-size: 14px; color: #6B7280; margin-top: 15px;">
+                    לחצו על הכפתור המועדף עליכם לניווט
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
           
           <div style="text-align: center; margin-top: 30px; color: #999; font-size: 14px; position: relative; z-index: 1;">
             <p>זהו מייל אוטומטי, אנא אל תשיבו למייל זה</p>
