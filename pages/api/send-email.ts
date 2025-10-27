@@ -153,17 +153,11 @@ export default async function handler(
               <p style="font-size: 16px; color: #4B5563; margin-bottom: 15px;">
                 אליעזר אלתר 30, חיפה
               </p>
-              <div style="width: 100%; overflow: hidden; border-radius: 8px; margin: 10px 0;">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.6766684765826!2d35.01213920000001!3d32.7743129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dbaea3f17951d%3A0xba0ac798a3d767ee!2z15HXmSLXoSDXoteZ16jXldeg15kg15nXkdeg15Q!5e0!3m2!1siw!2sil!4v1761556424221!5m2!1siw!2sil" 
-                  width="100%" 
-                  height="300" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-              </div>
+              <a href="https://maps.google.com/?q=32.7743129,35.0121392" style="display: block; border-radius: 8px; overflow: hidden; border: 2px solid #fde68a;">
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=32.7743129,35.0121392&zoom=15&size=600x300&markers=color:red%7C32.7743129,35.0121392&language=iw" 
+                     alt="Map Location" 
+                     style="width: 100%; border: 0; display: block;" />
+              </a>
               <p style="text-align: center; margin-top: 10px;">
                 <a href="https://maps.google.com/?q=32.7743129,35.0121392" 
                    style="color: #d97706; text-decoration: none; font-size: 14px; font-weight: bold;">
