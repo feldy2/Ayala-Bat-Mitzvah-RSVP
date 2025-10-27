@@ -9,8 +9,8 @@ const ThankYou: React.FC = () => {
 
   return (
     <Layout 
-      title="תודה רבה שאישרתם את ההגעה" 
-      description="תודה רבה שאישרתם את ההגעה לבת מצווה של אילה רחל"
+      title="תודה רבה שאישרתם את הגעתכם" 
+      description="תודה רבה שאישרתם את הגעתכם לבת מצווה של אילה רחל"
       showNavigation={false}
     >
       <ThankYouPage 

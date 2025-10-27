@@ -85,7 +85,7 @@ export default async function handler(
           
           <!-- Decorative Leaves in Corners -->
           <div style="position: absolute; top: 0; left: 0; width: 200px; height: 200px; opacity: 0.3;">
-            <img src="https://raw.githubusercontent.com/feldy2/Ayala-Bat-Mitzvah-RSVP/refs/heads/main/public/leaves-left-up.png" alt="Leaves" style="width: 100%; height: 100%; object-fit: contain;" />
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Leaves" style="width: 100%; height: 100%; object-fit: contain;" />
           </div>
           <div style="position: absolute; top: 0; right: 0; width: 200px; height: 200px; opacity: 0.3;">
             <img src="https://raw.githubusercontent.com/feldy2/Ayala-Bat-Mitzvah-RSVP/refs/heads/main/public/leaves-right-up.png" alt="Leaves" style="width: 100%; height: 100%; object-fit: contain;" />

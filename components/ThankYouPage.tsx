@@ -14,7 +14,7 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ guestName, hasEmail = false
           <div className="mb-8">
             <CheckCircle className="h-20 w-20 text-green-500 mx-auto mb-6" />
             <h1 className="text-4xl font-bold text-primary-700 mb-4">
-              תודה שאישרתם ההגעה!
+              תודה שאישרתם את הגעתכם!
             </h1>
             {guestName && (
               <p className="text-xl text-gray-600 mb-6">
@@ -51,7 +51,7 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ guestName, hasEmail = false
           <div className="flex items-center justify-center space-x-2 text-primary-600">
             <Heart className="h-5 w-5" />
             <p className="text-lg font-medium">
-              מחכים לראות אותכם!
+              מחכים לראותכם!
             </p>
             <Heart className="h-5 w-5" />
           </div>
