@@ -84,17 +84,17 @@ export default async function handler(
         <div style="font-family: 'Assistant', 'Heebo', 'Inter', system-ui, -apple-system, sans-serif; direction: rtl; text-align: right; width: 100%; background-color: #fef7f0; position: relative;">
           
           <!-- Decorative Leaves in Corners -->
-          <div style="position: absolute; top: 0; left: 0; width: 150px; height: 150px; opacity: 0.3;">
-            <img src="https://ayala-bat-mitzvah-rsvp-o7v1i8cge-moriyas-projects-8232c6d1.vercel.app/leaves-left-up.png" alt="Leaves" style="width: 100%; height: 100%; object-fit: contain;" />
+          <div style="position: absolute; top: 0; left: 0; width: 200px; height: 200px; opacity: 0.3;">
+            <img src="https://raw.githubusercontent.com/feldy2/Ayala-Bat-Mitzvah-RSVP/refs/heads/main/public/leaves-left-up.png" alt="Leaves" style="width: 100%; height: 100%; object-fit: contain;" />
           </div>
-          <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; opacity: 0.3;">
-            <img src="https://ayala-bat-mitzvah-rsvp-o7v1i8cge-moriyas-projects-8232c6d1.vercel.app/leaves-right-up.png" alt="Leaves" style="width: 100%; height: 100%; object-fit: contain;" />
+          <div style="position: absolute; top: 0; right: 0; width: 200px; height: 200px; opacity: 0.3;">
+            <img src="https://raw.githubusercontent.com/feldy2/Ayala-Bat-Mitzvah-RSVP/refs/heads/main/public/leaves-right-up.png" alt="Leaves" style="width: 100%; height: 100%; object-fit: contain;" />
           </div>
           
           <!-- Header Section -->
           <div style="text-align: center; margin-bottom: 30px; padding: 20px 0;">
             <div style="display: inline-block; width: 80px; height: 80px; margin-bottom: 15px; background: linear-gradient(135deg, #fef7f0 0%, #fffbeb 100%); border-radius: 50%; padding: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border: 1px solid #fde68a;">
-              <img src="https://ayala-bat-mitzvah-rsvp-o7v1i8cge-moriyas-projects-8232c6d1.vercel.app/logo.png" alt="Ayala Bat Mitzvah Logo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain;" />
+              <img src="https://raw.githubusercontent.com/feldy2/Ayala-Bat-Mitzvah-RSVP/refs/heads/main/public/logo.png" alt="Ayala Bat Mitzvah Logo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain;" />
             </div>
             <h1 style="color: #BF7046; font-size: 28px; margin: 0;">בת מצווה של אילה רחל מימון</h1>
           </div>
