@@ -89,7 +89,7 @@ export default async function handler(
             <img 
               src="https://i.ibb.co/d4fdBX9f/leaves-full.png"
               alt="Leaves Top Left"
-              style="position: absolute; top: 0; left: -60px; width: 230px; height: 230px; opacity: 0.23; transform: scaleX(-1); object-fit: contain;"
+              style="position: absolute; top: 0; left: -60px; width: 230px; height: 230px; opacity: 0.23;transform:rotate(270deg); object-fit: contain;"
             />
             <!-- Top Right Leaf -->
             <img 
