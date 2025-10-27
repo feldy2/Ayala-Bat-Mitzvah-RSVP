@@ -77,44 +77,27 @@ export default async function handler(
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
-        <body style="font-family: 'Assistant', 'Heebo', 'Inter', system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; position: relative;">
+        <body style="font-family: 'Assistant', 'Heebo', 'Inter', system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5;">
+        <table role="presentation" style="width: 100%; background-color: #fef7f0; direction: rtl;">
+          <tr>
+            <td style="padding: 10px 120px; position: relative;">
+        <div style="font-family: 'Assistant', 'Heebo', 'Inter', system-ui, -apple-system, sans-serif; direction: rtl; text-align: right; width: 100%; position: relative;">
+          
           <!-- Decorative Leaves Background: Top Left & Top Right -->
-          <div style="pointer-events: none; position: fixed; inset: 0; z-index: 0;">
+          <div style="pointer-events: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0;">
             <!-- Top Left Leaf -->
             <img 
               src="https://i.ibb.co/d4fdBX9f/leaves-full.png"
               alt="Leaves Top Left"
-              style="
-                position: absolute;
-                top: 0; left: 0;
-                width: 230px; height: 230px;
-                opacity: 0.23;
-                transform: scaleX(-1) rotate(0deg);
-                object-fit: contain;
-                z-index: 0;
-              "
+              style="position: absolute; top: 0; left: -60px; width: 230px; height: 230px; opacity: 0.23; transform: scaleX(-1); object-fit: contain;"
             />
             <!-- Top Right Leaf -->
             <img 
               src="https://i.ibb.co/d4fdBX9f/leaves-full.png"
               alt="Leaves Top Right"
-              style="
-                position: absolute;
-                top: 0; right: 0;
-                width: 230px; height: 230px;
-                opacity: 0.23;
-                transform:  rotate(0deg);
-                object-fit: contain;
-                z-index: 0;
-              "
+              style="position: absolute; top: 0; right: -60px; width: 230px; height: 230px; opacity: 0.23; object-fit: contain;"
             />
           </div>
-            </div>
-          </div>
-        <table role="presentation" style="width: 100%; background-color: #fef7f0; direction: rtl;">
-          <tr>
-            <td style="padding: 10px 120px; position: relative;">
-        <div style="font-family: 'Assistant', 'Heebo', 'Inter', system-ui, -apple-system, sans-serif; direction: rtl; text-align: right; width: 100%; position: relative;">
           
           
 		<!-- Header Section -->
