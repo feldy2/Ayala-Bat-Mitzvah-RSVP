@@ -69,7 +69,7 @@ export default async function handler(
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: to,
-      subject: 'תודה שאישרתם הגעה - בת מצווה של אילה רחל מימון',
+      subject: 'תודה שאישרתם הגעה - לבת מצווה של אילה רחל מימון',
       html: `
         <!DOCTYPE html>
         <html dir="rtl">
@@ -122,7 +122,7 @@ export default async function handler(
             <div style="display: inline-block; width: 70px; height: 70px; margin-bottom: 15px; background: linear-gradient(135deg, #fef7f0 0%, #fffbeb 100%); border-radius: 50%; padding: 6px; box-shadow: 0 7px 12px -3px rgba(0, 0, 0, 0.09); border: 1px solid #fde68a;">
               <img src="https://raw.githubusercontent.com/feldy2/Ayala-Bat-Mitzvah-RSVP/refs/heads/main/public/logo.png" alt="Ayala Bat Mitzvah Logo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain;" />
             </div>
-            <h1 style="color: #BF7046; font-size: 28px; margin: 0;">בת מצווה של אילה רחל מימון</h1>
+            <h1 style="color: #BF7046; font-size: 28px; margin: 0;">בת המצווה של אילה רחל מימון</h1>
           </div>
           
           <!-- Main Content -->
@@ -146,7 +146,7 @@ export default async function handler(
             </div>
             
             <p style="font-size: 16px; line-height: 1.6; color: #4B5563;">
-              אנו מאוד מתרגשים לחגוג איתכם! בקרוב תקבלו פרטים נוספים על האירוע.
+              אנו מאוד מתרגשים לחגוג איתכם!.
             </p>
             
             <p style="font-size: 16px; line-height: 1.6; color: #4B5563; margin-top: 30px;">
