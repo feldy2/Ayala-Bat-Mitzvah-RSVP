@@ -145,17 +145,12 @@ export default async function handler(
               <p style="font-size: 16px; color: #4B5563; margin-bottom: 15px;">
                 אליעזר אלתר 30, חיפה
               </p>
-              <a href="https://maps.google.com/?q=32.7743129,35.0121392" style="display: block; border-radius: 8px; overflow: hidden; border: 2px solid #fde68a;">
-                <img src="https://maps.googleapis.com/maps/api/staticmap?center=32.7743129,35.0121392&zoom=15&size=600x300&markers=color:red%7C32.7743129,35.0121392&language=iw" 
-                     alt="Map Location" 
-                     style="width: 100%; border: 0; display: block;" />
-              </a>
-              <p style="text-align: center; margin-top: 10px;">
+              <div style="background-color: #f9fafb; border-radius: 8px; padding: 15px; border: 2px solid #fde68a; text-align: center;">
                 <a href="https://maps.google.com/?q=32.7743129,35.0121392" 
-                   style="color: #d97706; text-decoration: none; font-size: 14px; font-weight: bold;">
+                   style="display: inline-block; background-color: #d97706; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: bold;">
                   📍 פתח במפות Google
                 </a>
-              </p>
+              </div>
             </div>
           </div>
           
