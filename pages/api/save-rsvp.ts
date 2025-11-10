@@ -68,10 +68,10 @@ export default async function handler(
           title: buildRichText(rsvpData.fullName || 'אורח ללא שם'),
         },
         Phone: {
-          phone_number: rsvpData.phone || "",
+          phone_number: rsvpData.phone || null,
         },
         Email: {
-          email: rsvpData.email || "",
+          email: rsvpData.email || null,
         },
         'Invite Sent': {
           checkbox: true, // Always true
