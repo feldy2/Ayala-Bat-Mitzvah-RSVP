@@ -96,7 +96,7 @@ export default async function handler(
       },
     };
 
-    const notionResponse = await fetch(NOTION_API_BASE_URL, {
+    const notionResponse = await fetch('https://api.notion.com/v1/pages', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${notionApiKey}`,
@@ -105,6 +105,7 @@ export default async function handler(
       },
       body: JSON.stringify(payload),
     });
+    
 
     if (!notionResponse.ok) {
       const errorText = await notionResponse.text();
