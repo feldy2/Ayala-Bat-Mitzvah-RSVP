@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RSVPFormData } from '@/types';
 import Alert from './Alert';
+import { CALENDAR_LINK } from '@/constants/event';
 
 interface RSVPFormProps {
   onSubmit: (data: RSVPFormData) => void;
@@ -214,11 +215,9 @@ const RSVPForm: React.FC<RSVPFormProps> = ({ onSubmit, isLoading = false }) => {
           role="link"
           aria-label="Add Bat Mitzvah event to calendar"
           className="inline-flex items-center space-x-2 text-primary-600 hover:text-primary-700 cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 rounded-lg px-4 py-2"
-          onClick={() => window.open('https://www.google.com/calendar/render?action=TEMPLATE&text=Ayala%27s+Bat+Mitzvah+Celebration&dates=20241215T140000Z/20241215T200000Z&details=Join+us+for+Ayala%27s+Bat+Mitzvah+celebration!&location=Temple+Beth+El%2C+123+Main+St%2C+City%2C+State', '_blank')}
+          onClick={() => window.open(CALENDAR_LINK, '_blank')}
           onKeyDown={(e) =>
-            handlePressEnterOrSpace(e, () =>
-              window.open('https://www.google.com/calendar/render?action=TEMPLATE&text=Ayala%27s+Bat+Mitzvah+Celebration&dates=20241215T140000Z/20241215T200000Z&details=Join+us+for+Ayala%27s+Bat+Mitzvah+celebration!&location=Temple+Beth+El%2C+123+Main+St%2C+City%2C+State', '_blank')
-            )
+            handlePressEnterOrSpace(e, () => window.open(CALENDAR_LINK, '_blank'))
           }
         >
           <span>📅</span>

@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
+import { CALENDAR_LINK } from '@/constants/event';
 
 interface EmailRequest {
   to: string;
@@ -187,7 +188,7 @@ export default async function handler(
                         </a>
                       </td>
                       <td class="event-link-cell event-link-cell-last" style="vertical-align: middle;">
-                        <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%D7%91%D7%AA+%D7%9E%D7%A6%D7%95%D7%95%D7%94+%D7%9C%D7%90%D7%99%D7%9C%D7%94+%D7%A8%D7%97%D7%9C+%D7%9E%D7%99%D7%9E%D7%95%D7%9F&dates=20241214T160000Z/20241214T200000Z&details=%D7%91%D7%95%D7%90%D7%95+%D7%9C%D7%97%D7%92%D7%95%D7%92+%D7%90%D7%99%D7%AA%D7%A0%D7%95+%D7%90%D7%AA+%D7%94%D7%92%D7%99%D7%A2%D7%AA%D7%94+%D7%A9%D7%9C+%D7%90%D7%99%D7%9C%D7%94+%D7%A8%D7%97%D7%9C+%D7%9C%D7%92%D7%99%D7%9C+%D7%9E%D7%A6%D7%95%D7%95%D7%AA&location=%D7%91%D7%99%D7%AA+%D7%A1%D7%A4%D7%A8+%D7%99%D7%91%D7%A0%D7%94%2C+%D7%90%D7%9C%D7%99%D7%A2%D7%96%D7%A8+%D7%90%D7%9C%D7%AA%D7%A8+30%2C+%D7%97%D7%99%D7%A4%D7%94"
+                        <a href="${CALENDAR_LINK}"
                             class="event-link-button"
                             style="display: inline-block; background-color: #FBBF24; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
                           🗓️ הוסף ליומן
