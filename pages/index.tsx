@@ -11,7 +11,7 @@ const eventDetails: EventDetails = {
   name: "בת מצווה לאילה רחל מימון",
   date: "ה' בכסלו תשפ'ו",
   date2: "26.11.2025",
-  time: "חברות 18:00",
+  time: "חברות  18:00",
   time2: "משפחה 19:00",
   location: "בית ספר יבנה",
   address: " אליעזר אלתר 30, חיפה",
