@@ -6,7 +6,7 @@ interface RSVPRequestBody extends RSVPFormData {
   id?: string;
 }
 
-const NOTION_API_BASE_URL = 'https://api.notion.com/v1/pages';
+const NOTION_API_BASE_URL = 'https://www.notion.so/';
 const NOTION_VERSION = '2022-06-28';
 
 type NotionRichText = Array<{
