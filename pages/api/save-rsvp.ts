@@ -1,8 +1,35 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { RSVPFormData } from '@/types';
+
+interface RSVPRequestBody extends RSVPFormData {
+  submittedAt?: string;
+  id?: string;
+}
 
 const NOTION_API_URL = 'https://api.notion.com/v1/pages';
 const NOTION_VERSION = '2022-06-28';
 
+type NotionRichText = Array<{
+  type: 'text';
+  text: {
+    content: string;
+  };
+}>;
+
+const buildRichText = (content?: string): NotionRichText => {
+  if (!content) {
+    return [];
+  }
+
+  return [
+    {
+      type: 'text',
+      text: {
+        content,
+      },
+    },
+  ];
+};
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -19,21 +46,44 @@ export default async function handler(
   }
 
   try {
-    const { fullName } = req.body;
+    const rsvpData = req.body as RSVPRequestBody;
 
-    if (!fullName) {
-      return res.status(400).json({ success: false, message: 'Name is required' });
-    }
+    const submittedAt =
+      rsvpData.submittedAt ?? new Date().toISOString();
 
     const payload = {
-      parent: { database_id: notionDatabaseId },
+      parent: {
+        database_id: notionDatabaseId,
+      },
       properties: {
         Name: {
-          title: [
-            {
-              text: { content: fullName },
-            },
-          ],
+          title: buildRichText(rsvpData.fullName || 'אורח ללא שם'),
+        },
+        Phone: {
+          phone_number: rsvpData.phone || null,
+        },
+        Email: {
+          email: rsvpData.email || null,
+        },
+        'Invite Sent': {
+          checkbox: true, // Always true
+        },
+        RSVP: {
+           status: rsvpData.attending === 'yes' ? { name: "Accepted" } : { name: "Declined" },
+        },        
+        'Guest Count': {
+          number: Number(rsvpData.guests) || 0,
+        },
+        Guests: {
+          rich_text: buildRichText(rsvpData.guests || '0'),
+        },
+        'Dietary Restrictions': {
+          rich_text: buildRichText(rsvpData.dietaryRestrictions || 'None'),
+        },
+        'Submitted At': {
+          date: {
+            start: submittedAt,
+          },
         },
       },
     };
