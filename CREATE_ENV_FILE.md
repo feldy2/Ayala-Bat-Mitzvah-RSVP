@@ -30,6 +30,10 @@ Copy and paste the following into your `.env.local` file:
 
 EMAIL_USER=your-gmail-address@gmail.com
 EMAIL_PASSWORD=YOUR_APP_PASSWORD
+
+# Notion configuration (optional, required for logging RSVPs to Notion)
+NOTION_API_KEY=your-notion-integration-secret
+NOTION_DATABASE_ID=your-notion-database-id
 ```
 
 ## Steps to Setup

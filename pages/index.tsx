@@ -41,6 +41,24 @@ const HomePage: React.FC = () => {
       existingRSVPs.push(newRSVP);
       localStorage.setItem('rsvps', JSON.stringify(existingRSVPs));
       
+      // Persist RSVP to Notion
+      try {
+        const notionResponse = await fetch('/api/save-rsvp', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newRSVP),
+        });
+
+        if (!notionResponse.ok) {
+          const notionResult = await notionResponse.json();
+          console.error('Failed to store RSVP in Notion:', notionResult?.message);
+        }
+      } catch (notionError) {
+        console.error('Error storing RSVP in Notion:', notionError);
+      }
+
       // Send email if email is provided
       if (formData.email) {
         try {
