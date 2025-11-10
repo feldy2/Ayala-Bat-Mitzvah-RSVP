@@ -9,10 +9,10 @@ import { RSVPFormData, EventDetails } from '@/types';
 
 const eventDetails: EventDetails = {
   name: "בת מצווה לאילה רחל מימון",
-  date: "????",
-  time: "?????",
-  location: "???????",
-  address: "??????",
+  date: "25.11.2025 ה' בכסלו תשפ'ו",
+  time: "חברות 18:00\nמשפחה 19:00",
+  location: "בית ספר יבנה",
+  address: " אליעזר אלתר 30, חיפה",
   description: "בואו לחגוג איתנו את הגעתה של אילה רחל לגיל מצוות"
 };
 

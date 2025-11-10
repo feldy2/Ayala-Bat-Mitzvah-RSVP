@@ -76,6 +76,29 @@ export default async function handler(
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <style>
+            @media only screen and (max-width: 600px) {
+              .event-links-table {
+                width: 100% !important;
+                border-spacing: 0 !important;
+              }
+              .event-link-cell {
+                display: block !important;
+                width: 100% !important;
+                padding: 0 0 12px 0 !important;
+              }
+              .event-link-cell-last {
+                padding-bottom: 0 !important;
+              }
+              .event-link-button {
+                display: block !important;
+                width: 100% !important;
+                padding: 15px 0 !important;
+                box-sizing: border-box !important;
+                text-align: center !important;
+              }
+            }
+          </style>
         </head>
         <body style="font-family: 'Assistant', 'Heebo', 'Inter', system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5;">
         <table role="presentation" style="width: 100%; background-color: #fef7f0; direction: rtl;">
@@ -147,22 +170,25 @@ export default async function handler(
               </p>
                 <div style="text-align: center; background-color: #f3f4f6; padding: 30px 20px; border-radius: 8px; border: 2px solid #fde68a; margin: 20px 0;">
                   <p style="font-size: 18px; color: #BF7046; margin-bottom: 20px; font-weight: bold;">קישורים שימושיים לאירוע</p>
-                  <table role="presentation" style="margin: 0 auto; border-collapse: separate; border-spacing: 15px 0;">
+                  <table role="presentation" class="event-links-table" style="margin: 0 auto; border-collapse: separate; border-spacing: 15px 0;">
                     <tr>
-                      <td style="vertical-align: middle;">
+                      <td class="event-link-cell" style="vertical-align: middle;">
                         <a href="https://maps.app.goo.gl/gw8zFeGbgLPdQsG37" 
+                            class="event-link-button"
                             style="display: inline-block; background-color: #4285F4; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
                           📍 Google Maps
                         </a>
                       </td>
-                      <td style="vertical-align: middle;">
+                      <td class="event-link-cell" style="vertical-align: middle;">
                         <a href="https://waze.com/ul?ll=32.7743129,35.0121392&navigate=yes" 
+                            class="event-link-button"
                             style="display: inline-block; background-color: #33CCFF; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
                           🚗 Waze
                         </a>
                       </td>
-                      <td style="vertical-align: middle;">
+                      <td class="event-link-cell event-link-cell-last" style="vertical-align: middle;">
                         <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%D7%91%D7%AA+%D7%9E%D7%A6%D7%95%D7%95%D7%94+%D7%9C%D7%90%D7%99%D7%9C%D7%94+%D7%A8%D7%97%D7%9C+%D7%9E%D7%99%D7%9E%D7%95%D7%9F&dates=20241214T160000Z/20241214T200000Z&details=%D7%91%D7%95%D7%90%D7%95+%D7%9C%D7%97%D7%92%D7%95%D7%92+%D7%90%D7%99%D7%AA%D7%A0%D7%95+%D7%90%D7%AA+%D7%94%D7%92%D7%99%D7%A2%D7%AA%D7%94+%D7%A9%D7%9C+%D7%90%D7%99%D7%9C%D7%94+%D7%A8%D7%97%D7%9C+%D7%9C%D7%92%D7%99%D7%9C+%D7%9E%D7%A6%D7%95%D7%95%D7%AA&location=%D7%91%D7%99%D7%AA+%D7%A1%D7%A4%D7%A8+%D7%99%D7%91%D7%A0%D7%94%2C+%D7%90%D7%9C%D7%99%D7%A2%D7%96%D7%A8+%D7%90%D7%9C%D7%AA%D7%A8+30%2C+%D7%97%D7%99%D7%A4%D7%94"
+                            class="event-link-button"
                             style="display: inline-block; background-color: #FBBF24; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
                           🗓️ הוסף ליומן
                         </a>
