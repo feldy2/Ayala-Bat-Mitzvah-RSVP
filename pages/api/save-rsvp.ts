@@ -77,7 +77,7 @@ export default async function handler(
           checkbox: true, // Always true
         },
         RSVP: {
-          status: rsvpData.attending === 'yes' ? 'Accepted' : 'Declined',
+          status: rsvpData.attending === 'yes' ? { name: "Accepted" } : { name: "Declined" },
         },
         'Guest Count': {
           number: Number(rsvpData.guests) || 0,
