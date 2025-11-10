@@ -20,6 +20,7 @@ const EventInfoCard: React.FC<EventInfoCardProps> = ({ event }) => {
           <div>
             <p className="font-semibold text-gray-800 mb-1">תאריך</p>
             <p className="text-gray-600">{event.date}</p>
+            <p className="text-sm text-gray-500">{event.date2}</p>
           </div>
         </div>
         
@@ -28,6 +29,7 @@ const EventInfoCard: React.FC<EventInfoCardProps> = ({ event }) => {
           <div>
             <p className="font-semibold text-gray-800 mb-1">שעה</p>
             <p className="text-gray-600">{event.time}</p>
+            <p className="text-gray-600">{event.time2}</p>
           </div>
         </div>
         

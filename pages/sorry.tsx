@@ -24,7 +24,7 @@ const SorryPage: React.FC = () => {
               </p>
             )}
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              מצטערים שלא תוכלו להיות איתנו בחגיגה, נשמח לראותכם בשמחות אחרות!
+            מצטערים שלא תוכלו להצטרף אלינו לחגיגה, נשמח לחגוג יחד באירועים הבאים!
             </p>
             <p className="text-primary-600 text-lg font-medium">
               ניפגש בשמחות 🤍

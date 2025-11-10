@@ -11,7 +11,9 @@ export interface RSVPFormData {
 export interface EventDetails {
   name: string;
   date: string;
+  date2: string;
   time: string;
+  time2: string;
   location: string;
   address: string;
   description: string;
