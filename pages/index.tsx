@@ -9,8 +9,8 @@ import { RSVPFormData, EventDetails } from '@/types';
 
 const eventDetails: EventDetails = {
   name: "בת מצווה לאילה רחל מימון",
-  date: "25.11.2025 ה' בכסלו תשפ'ו",
-  time: "חברות 18:00\nמשפחה 19:00",
+  date: "25.11.2025\nה' בכסלו תשפ'ו",
+  time: "חברות 18:00\n\nמשפחה 19:00",
   location: "בית ספר יבנה",
   address: " אליעזר אלתר 30, חיפה",
   description: "בואו לחגוג איתנו את הגעתה של אילה רחל לגיל מצוות"
@@ -68,12 +68,17 @@ const HomePage: React.FC = () => {
         }
       }
       
-      // Redirect to thank you page
+      // Redirect based on attendance
       const params = new URLSearchParams({
         name: formData.fullName,
         hasEmail: formData.email ? 'true' : 'false'
       });
-      router.push(`/thank-you?${params.toString()}`);
+
+      const targetPath = formData.attending === 'yes'
+        ? `/thank-you?${params.toString()}`
+        : `/sorry?${params.toString()}`;
+
+      router.push(targetPath);
     } catch (error) {
       setSubmitMessage({
         type: 'error',
