@@ -32,7 +32,7 @@ const EventInfoCard: React.FC<EventInfoCardProps> = ({ event }) => {
             <p className="font-semibold text-gray-800 mb-1">שעה</p>
             <div>
               <p className="text-gray-600">{event.time}</p>
-              <p className="text-sm text-gray-500">{event.time2}</p>
+              <p className="text-gray-600">{event.time2}</p>
             </div>
           </div>
         </div>
