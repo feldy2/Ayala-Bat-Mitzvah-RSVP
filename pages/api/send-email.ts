@@ -143,28 +143,34 @@ export default async function handler(
             <div style="margin-top: 30px;">
               <h3 style="color: #BF7046; font-size: 20px; margin-bottom: 15px;">מיקום האירוע:</h3>
               <p style="font-size: 16px; color: #4B5563; margin-bottom: 15px;">
-                אליעזר אלתר 30, חיפה
+                בית ספר יבנה, אליעזר אלתר 30, חיפה
               </p>
                 <div style="text-align: center; background-color: #f3f4f6; padding: 30px 20px; border-radius: 8px; border: 2px solid #fde68a; margin: 20px 0;">
-                  <p style="font-size: 18px; color: #BF7046; margin-bottom: 20px; font-weight: bold;">🗺️ ניווט לאירוע</p>
-                  <table role="presentation" style="margin: 0 auto;">
+                  <p style="font-size: 18px; color: #BF7046; margin-bottom: 20px; font-weight: bold;">קישורים שימושיים לאירוע</p>
+                  <table role="presentation" style="margin: 0 auto; border-collapse: separate; border-spacing: 15px 0;">
                     <tr>
-                      <td style="padding: 0 10px;">
+                      <td style="vertical-align: middle;">
                         <a href="https://maps.app.goo.gl/gw8zFeGbgLPdQsG37" 
                             style="display: inline-block; background-color: #4285F4; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
                           📍 Google Maps
                         </a>
                       </td>
-                      <td style="padding: 0 10px;">
+                      <td style="vertical-align: middle;">
                         <a href="https://waze.com/ul?ll=32.7743129,35.0121392&navigate=yes" 
                             style="display: inline-block; background-color: #33CCFF; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
                           🚗 Waze
                         </a>
                       </td>
+                      <td style="vertical-align: middle;">
+                        <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%D7%91%D7%AA+%D7%9E%D7%A6%D7%95%D7%95%D7%94+%D7%9C%D7%90%D7%99%D7%9C%D7%94+%D7%A8%D7%97%D7%9C+%D7%9E%D7%99%D7%9E%D7%95%D7%9F&dates=20241214T160000Z/20241214T200000Z&details=%D7%91%D7%95%D7%90%D7%95+%D7%9C%D7%97%D7%92%D7%95%D7%92+%D7%90%D7%99%D7%AA%D7%A0%D7%95+%D7%90%D7%AA+%D7%94%D7%92%D7%99%D7%A2%D7%AA%D7%94+%D7%A9%D7%9C+%D7%90%D7%99%D7%9C%D7%94+%D7%A8%D7%97%D7%9C+%D7%9C%D7%92%D7%99%D7%9C+%D7%9E%D7%A6%D7%95%D7%95%D7%AA&location=%D7%91%D7%99%D7%AA+%D7%A1%D7%A4%D7%A8+%D7%99%D7%91%D7%A0%D7%94%2C+%D7%90%D7%9C%D7%99%D7%A2%D7%96%D7%A8+%D7%90%D7%9C%D7%AA%D7%A8+30%2C+%D7%97%D7%99%D7%A4%D7%94"
+                            style="display: inline-block; background-color: #FBBF24; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
+                          🗓️ הוסף ליומן
+                        </a>
+                      </td>
                     </tr>
                   </table>
                   <p style="font-size: 14px; color: #6B7280; margin-top: 15px;">
-                    לחצו על הכפתור המועדף עליכם לניווט
+                    נפגשים בשמחה! הנה כל מה שצריך
                   </p>
                 </div>
               </div>
