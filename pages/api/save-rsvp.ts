@@ -79,19 +79,19 @@ export default async function handler(
         // RSVP: {
         //   status: rsvpData.attending === 'yes' ? { name: "Accepted" } : { name: "Declined" },
         // },        
-        // 'Guest Count': {
-        //   number: Number(rsvpData.guests) || 0,
-        // },
-        // Guests: {
-        //   rich_text: buildRichText(rsvpData.guests || '0'),
-        // },
-        // 'Dietary Restrictions': {
-        //   rich_text: buildRichText(rsvpData.dietaryRestrictions || 'None'),
-        // },
-        // 'Submitted At': {
-        //   date: {
-        //     start: submittedAt,
-        //   },
+        'Guest Count': {
+          number: Number(rsvpData.guests) || 0,
+        },
+        Guests: {
+          rich_text: buildRichText(rsvpData.guests || '0'),
+        },
+        'Dietary Restrictions': {
+          rich_text: buildRichText(rsvpData.dietaryRestrictions || 'None'),
+        },
+        'Submitted At': {
+          date: {
+            start: submittedAt,
+          },
         },
       },
     };
