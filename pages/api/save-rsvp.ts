@@ -67,34 +67,31 @@ export default async function handler(
         Name: {
           title: buildRichText(rsvpData.fullName || 'אורח ללא שם'),
         },
-        // Phone: {
-        //   phone_number: rsvpData.phone || null,
-        // },
-        // Email: {
-        //   email: rsvpData.email || null,
-        // },
-        // 'Invite Sent': {
-        //   checkbox: true, // Always true
-        // },
-        // RSVP: {
-        //   status: rsvpData.attending === 'yes' ? { name: "Accepted" } : { name: "Declined" },
-        // },        
-        // 'Guest Count': {
-        //   number: Number(rsvpData.guests) || 0,
-        // },
-        // Guests: {
-        //   rich_text: buildRichText(rsvpData.guests || '0'),
-        // },
-        // 'Dietary Restrictions': {
-        //   rich_text: buildRichText(rsvpData.dietaryRestrictions || 'None'),
-        // },
-        // Message: {
-        //   rich_text: buildRichText(rsvpData.message),
-        // },
-        // 'Submitted At': {
-        //   date: {
-        //     start: submittedAt,
-        //   },
+        Phone: {
+          phone_number: rsvpData.phone || null,
+        },
+        Email: {
+          email: rsvpData.email || null,
+        },
+        'Invite Sent': {
+          checkbox: true, // Always true
+        },
+        RSVP: {
+          status: rsvpData.attending === 'yes' ? { name: "Accepted" } : { name: "Declined" },
+        },        
+        'Guest Count': {
+          number: Number(rsvpData.guests) || 0,
+        },
+        Guests: {
+          rich_text: buildRichText(rsvpData.guests || '0'),
+        },
+        'Dietary Restrictions': {
+          rich_text: buildRichText(rsvpData.dietaryRestrictions || 'None'),
+        },
+        'Submitted At': {
+          date: {
+            start: submittedAt,
+          },
         },
       },
     };
