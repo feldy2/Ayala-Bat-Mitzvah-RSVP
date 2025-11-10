@@ -32,10 +32,10 @@ const EventInfoCard: React.FC<EventInfoCardProps> = ({ event }) => {
             <p className="font-semibold text-gray-800 mb-1">שעה</p>
             <div>
               <div className="flex justify-between items-center">
-                <span className="text-gray-600 text-right" dir="rtl" style={{width:'50%'}}>{event.time?.replace(/\s+(\d+)/, (m, num) => ` <span style='float:left;'>${num}</span>`) || ''}</span>
+                <span className="text-gray-600 text-right" dir="rtl" style={{width:'50%'}}>{event.time?.replace(/\s+(\d+)/, (m, num) => ` ${num}`) || ''}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-gray-600 text-right" dir="rtl" style={{width:'50%'}}>{event.time2?.replace(/\s+(\d+)/, (m, num) => ` <span style='float:left;'>${num}</span>`) || ''}</span>
+                <span className="text-gray-600 text-right" dir="rtl" style={{width:'50%'}}>{event.time2?.replace(/\s+(\d+)/, (m, num) => ` ${num}`) || ''}</span>
               </div>
             </div>
           </div>
