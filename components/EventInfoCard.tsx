@@ -6,6 +6,9 @@ interface EventInfoCardProps {
   event: EventDetails;
 }
 
+const formatTimeLabel = (value?: string) =>
+  value ? value.replace(/\s+/g, ' ').trim() : '';
+
 const EventInfoCard: React.FC<EventInfoCardProps> = ({ event }) => {
   return (
     <div className="card-elegant p-8 mb-8 animate-fade-in">
@@ -30,13 +33,9 @@ const EventInfoCard: React.FC<EventInfoCardProps> = ({ event }) => {
           <Clock className="h-8 w-8 text-gold-600" />
           <div>
             <p className="font-semibold text-gray-800 mb-1">שעה</p>
-            <div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600 text-right" dir="rtl" style={{width:'50%'}}>{event.time?.replace(/\s+(\d+)/, (m, num) => ` ${num}`) || ''}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600 text-right" dir="rtl" style={{width:'50%'}}>{event.time2?.replace(/\s+(\d+)/, (m, num) => ` ${num}`) || ''}</span>
-              </div>
+            <div className="space-y-1 text-right" dir="rtl">
+              <p className="text-gray-600">{formatTimeLabel(event.time)}</p>
+              <p className="text-gray-600">{formatTimeLabel(event.time2)}</p>
             </div>
           </div>
         </div>
