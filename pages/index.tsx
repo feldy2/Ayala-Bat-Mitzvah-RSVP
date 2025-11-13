@@ -13,8 +13,8 @@ const eventDetails: EventDetails = {
   date2: "25.11.2025",
   time: "חברות     18:00",
   time2: "משפחה     19:00",
-  location: "בית ספר יבנה",
-  address: " אליעזר אלתר 30, חיפה",
+  location: "בית כנסת תפארת שאנן",
+  address: " יהשוע השל 2, חיפה",
   description: "בואו לחגוג איתנו את הגעתה של אילה רחל לגיל מצוות"
 };
 

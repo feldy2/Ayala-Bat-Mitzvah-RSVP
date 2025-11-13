@@ -167,21 +167,21 @@ export default async function handler(
             <div style="margin-top: 30px;">
               <h3 style="color: #BF7046; font-size: 20px; margin-bottom: 15px;">מיקום האירוע:</h3>
               <p style="font-size: 16px; color: #4B5563; margin-bottom: 15px;">
-                בית ספר יבנה, אליעזר אלתר 30, חיפה
+                בית כנסת תפארת שאנן, יהשוע השל 2, חיפה
               </p>
                 <div style="text-align: center; background-color: #f3f4f6; padding: 30px 20px; border-radius: 8px; border: 2px solid #fde68a; margin: 20px 0;">
                   <p style="font-size: 18px; color: #BF7046; margin-bottom: 20px; font-weight: bold;">קישורים שימושיים לאירוע</p>
                   <table role="presentation" class="event-links-table" style="margin: 0 auto; border-collapse: separate; border-spacing: 15px 0;">
                     <tr>
                       <td class="event-link-cell" style="vertical-align: middle;">
-                        <a href="https://maps.app.goo.gl/gw8zFeGbgLPdQsG37" 
+                        <a href="https://maps.app.goo.gl/UayogBf8bTPCfpE5A" 
                             class="event-link-button"
                             style="display: inline-block; background-color: #4285F4; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
                           📍 Google Maps
                         </a>
                       </td>
                       <td class="event-link-cell" style="vertical-align: middle;">
-                        <a href="https://waze.com/ul?ll=32.7743129,35.0121392&navigate=yes" 
+                        <a href="https://www.waze.com/en/live-map/directions/il/%D7%9E%D7%97%D7%95%D7%96-%D7%97%D7%99%D7%A4%D7%94/%D7%97%D7%99%D7%A4%D7%94/%D7%A4%D7%A8%D7%95%D7%A4%D7%A1%D7%95%D7%A8-%D7%99%D7%94%D7%95%D7%A9%D7%A2-%D7%94%D7%A9%D7%9C-2?navigate=yes&place=ChIJ5Sf58vS6HRURm4m-kZICEu0" 
                             class="event-link-button"
                             style="display: inline-block; background-color: #33CCFF; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: bold;">
                           🚗 Waze
